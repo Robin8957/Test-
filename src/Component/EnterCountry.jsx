@@ -9,12 +9,14 @@ class Country extends React.Component {
     submit: false,
   };
 
+  //   Handling input
   handlechange = (event) => {
     this.setState({
       name: event.target.value,
     });
   };
 
+  //   submitting country name
   submit = () => {
     var data = this.state.name;
     axios
@@ -36,6 +38,7 @@ class Country extends React.Component {
       });
   };
 
+  //   changing view when getting country data
   page() {
     if (this.state.submit) {
       return (

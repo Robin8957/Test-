@@ -1,10 +1,8 @@
 import React from 'react';
 import '../App.css';
-import axios from 'axios';
 
 class Weather extends React.Component {
   render() {
-    console.log('temp', this.props.temperature);
     return (
       <>
         <div>
@@ -39,15 +37,6 @@ class Weather extends React.Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="form-group">
-          <button
-            type="button"
-            className="btn btn-primary"
-            onClick={this.submit}
-          >
-            Capital Weather
-          </button>
         </div>
       </>
     );

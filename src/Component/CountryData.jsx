@@ -6,6 +6,7 @@ import Weather from './Weather';
 class CountryData extends React.Component {
   state = { submit: false };
 
+  //   submitting for weather of capital
   submit = () => {
     var data = this.props.capital;
     axios
@@ -30,6 +31,7 @@ class CountryData extends React.Component {
       });
   };
 
+  //   changing view when geeting weather data
   page() {
     if (this.state.submit) {
       console.log('temp', this.state.temperature);
@@ -76,6 +78,15 @@ class CountryData extends React.Component {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="form-group mt50">
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={this.submit}
+            >
+              Capital Weather
+            </button>
           </div>
         </>
       );
